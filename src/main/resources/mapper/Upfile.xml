@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+     <mapper namespace="com.cen.mapper.UpfileMapper">
+        <insert id="saveFile" parameterType="Upfile">
+            insert into r_file(fileno,filename,filepath)  values(#{fileno},#{filename},#{filepath})
+        </insert>
+        <select id="getFile" resultType="Upfile">
+            select * from r_file
+        </select>
+     </mapper>
